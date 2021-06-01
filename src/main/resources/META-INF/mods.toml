@@ -1,0 +1,22 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="Not specified"
+
+[[mods]]
+modId="snowball_warfare"
+version="1.0.1"
+displayName="Snowball Warfare"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+displayURL="https://mcreator.net"
+authors="Polarcube1"
+
+[[dependencies.snowball_warfare]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

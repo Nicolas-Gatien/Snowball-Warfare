@@ -1,0 +1,11 @@
+{
+  "_fv": 18,
+  "_type": "tab",
+  "definition": {
+    "name": "Snowball Warfare",
+    "icon": {
+      "value": "CUSTOM:ExplosiveSnowball"
+    },
+    "showSearch": false
+  }
+}

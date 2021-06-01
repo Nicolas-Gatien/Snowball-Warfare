@@ -1,0 +1,43 @@
+{
+  "_fv": 18,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "explosiveball",
+    "customModelName": "Normal",
+    "name": "Explosive Snow Ball",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Frost"
+    },
+    "stackSize": 16,
+    "ammoItem": {
+      "value": "CUSTOM:ExplosiveSnowball"
+    },
+    "shootConstantly": true,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": true,
+    "damageVsEntity": 2.0,
+    "bulletPower": 0.30000000000000004,
+    "bulletDamage": 2.0,
+    "bulletKnockback": 0,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:ExplosiveSnowball"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "ExplosiveSnowballBulletHit"
+    },
+    "onBulletHitsEntity": {
+      "name": "ExplosiveSnowballBulletHit"
+    }
+  }
+}

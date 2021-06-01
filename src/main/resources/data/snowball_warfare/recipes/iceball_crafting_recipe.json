@@ -1,0 +1,13 @@
+{
+  "group": "snowball_warfare",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:packed_ice"
+    }
+  ],
+  "result": {
+    "item": "snowball_warfare:iceball",
+    "count": 8
+  }
+}

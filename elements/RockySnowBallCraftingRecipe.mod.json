@@ -1,0 +1,46 @@
+{
+  "_fv": 18,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "recipeRetstackSize": 8,
+    "group": "",
+    "recipeShapeless": true,
+    "recipeSlots": [
+      {
+        "value": "Items.SNOWBALL"
+      },
+      {
+        "value": "Items.SNOWBALL"
+      },
+      {
+        "value": "Blocks.GRAVEL"
+      },
+      {
+        "value": "Items.SNOWBALL"
+      },
+      {
+        "value": "Items.SNOWBALL"
+      },
+      {
+        "value": "Items.SNOWBALL"
+      },
+      {
+        "value": "Items.SNOWBALL"
+      },
+      {
+        "value": "Items.SNOWBALL"
+      },
+      {
+        "value": "Items.SNOWBALL"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:RockySnowBall"
+    },
+    "name": "rocky_snow_ball_crafting_recipe",
+    "namespace": "mod"
+  }
+}

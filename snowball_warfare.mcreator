@@ -1,0 +1,249 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "Frost",
+      "type": "tab",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "frost"
+    },
+    {
+      "name": "RockySnowBall",
+      "type": "gun",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rocky_snow_ball"
+    },
+    {
+      "name": "RockySnowBallCraftingRecipe",
+      "type": "recipe",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rocky_snow_ball_crafting_recipe"
+    },
+    {
+      "name": "Iceball",
+      "type": "gun",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iceball"
+    },
+    {
+      "name": "IceballCraftingRecipe",
+      "type": "recipe",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iceball_crafting_recipe"
+    },
+    {
+      "name": "RockySnowballHit",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "rocky_snowball_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IceBallHit",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "ice_ball_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IceballSmeltingRecipe",
+      "type": "recipe",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "iceball_smelting_recipe"
+    },
+    {
+      "name": "HugeSnowball",
+      "type": "gun",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "huge_snowball"
+    },
+    {
+      "name": "HugeSnowballBulletHit",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "huge_snowball_bullet_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ExplosiveSnowball",
+      "type": "gun",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "explosive_snowball"
+    },
+    {
+      "name": "ExplosiveSnowballBulletHit",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "explosive_snowball_bullet_hit",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "HugeSnowballCraftingRecipe",
+      "type": "recipe",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "huge_snowball_crafting_recipe"
+    },
+    {
+      "name": "ExplosiveSnowballrecipe",
+      "type": "recipe",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "explosive_snowballrecipe"
+    }
+  ],
+  "variable_elements": [],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "item.frost_dimension.iceball": "Iceball",
+      "item.snowball_warfare.iceball": "Iceball",
+      "item.frost_dimension.explosive_snowball": "Explosive Snow Ball",
+      "item.snowball_warfare.rocky_snow_ball": "Rocky Snow Ball",
+      "item.frost_dimension.rocky_snow_ball": "Rocky Snow Ball",
+      "item.snowball_warfare.explosive_snowball": "Explosive Snow Ball",
+      "item.frost_dimension.huge_snowball": "Huge Snow Ball",
+      "itemGroup.tabfrost": "Snowball Warfare",
+      "item.snowball_warfare.huge_snowball": "Huge Snow Ball"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "snowball_warfare",
+    "modName": "Snowball Warfare",
+    "version": "1.0.1",
+    "author": "Polarcube1",
+    "websiteURL": "https://mcreator.net",
+    "license": "Not specified",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.16.5",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.snowballwarfare",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202100118117
+}

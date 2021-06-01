@@ -1,0 +1,12 @@
+{
+  "group": "snowball_warfare",
+  "type": "minecraft:smelting",
+  "experience": 0,
+  "cookingtime": 50,
+  "ingredient": {
+    "item": "minecraft:snowball"
+  },
+  "result": {
+    "item": "snowball_warfare:iceball"
+  }
+}

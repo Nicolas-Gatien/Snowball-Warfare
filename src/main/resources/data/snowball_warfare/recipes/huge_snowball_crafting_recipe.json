@@ -1,0 +1,22 @@
+{
+  "group": "snowball_warfare",
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:snow_block"
+    },
+    {
+      "item": "minecraft:snow_block"
+    },
+    {
+      "item": "minecraft:snow_block"
+    },
+    {
+      "item": "minecraft:snow_block"
+    }
+  ],
+  "result": {
+    "item": "snowball_warfare:huge_snowball",
+    "count": 4
+  }
+}

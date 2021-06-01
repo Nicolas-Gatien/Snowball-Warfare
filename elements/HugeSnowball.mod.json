@@ -1,0 +1,43 @@
+{
+  "_fv": 18,
+  "_type": "gun",
+  "definition": {
+    "renderType": 0,
+    "texture": "bigball",
+    "customModelName": "Normal",
+    "name": "Huge Snow Ball",
+    "specialInfo": [],
+    "creativeTab": {
+      "value": "CUSTOM:Frost"
+    },
+    "stackSize": 16,
+    "ammoItem": {
+      "value": "CUSTOM:HugeSnowball"
+    },
+    "shootConstantly": true,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "bow",
+    "enableMeleeDamage": true,
+    "damageVsEntity": 2.0,
+    "bulletPower": 0.30000000000000004,
+    "bulletDamage": 5.0,
+    "bulletKnockback": 3,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": "CUSTOM:HugeSnowball"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": "",
+    "onBulletHitsBlock": {
+      "name": "HugeSnowballBulletHit"
+    },
+    "onBulletHitsEntity": {
+      "name": "HugeSnowballBulletHit"
+    }
+  }
+}
