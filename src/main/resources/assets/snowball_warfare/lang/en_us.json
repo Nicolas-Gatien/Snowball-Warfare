@@ -2,9 +2,12 @@
   "item.frost_dimension.iceball": "Iceball",
   "item.snowball_warfare.iceball": "Iceball",
   "item.frost_dimension.explosive_snowball": "Explosive Snow Ball",
-  "item.snowball_warfare.rocky_snow_ball": "Rocky Snow Ball",
   "item.frost_dimension.rocky_snow_ball": "Rocky Snow Ball",
   "item.snowball_warfare.explosive_snowball": "Explosive Snow Ball",
+  "item.snowball_warfare.magma_ball": "Magmaball",
+  "item.snowball_warfare.rocky_snow_ball": "Rocky Snow Ball",
+  "item.snowball_warfare.firework_snowball": "Firework Snowball",
+  "block.snowball_warfare.powder_snow": "Powder Snow",
   "item.frost_dimension.huge_snowball": "Huge Snow Ball",
   "itemGroup.tabfrost": "Snowball Warfare",
   "item.snowball_warfare.huge_snowball": "Huge Snow Ball"

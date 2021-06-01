@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "snowball_warfare:blocks/fake_snow",
+    "up": "snowball_warfare:blocks/fake_snow",
+    "north": "snowball_warfare:blocks/fake_snow",
+    "east": "snowball_warfare:blocks/fake_snow",
+    "south": "snowball_warfare:blocks/fake_snow",
+    "west": "snowball_warfare:blocks/fake_snow",
+    "particle": "snowball_warfare:blocks/fake_snow"
+  }
+}

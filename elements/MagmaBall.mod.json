@@ -3,41 +3,38 @@
   "_type": "gun",
   "definition": {
     "renderType": 0,
-    "texture": "rockyball",
+    "texture": "magmaball",
     "customModelName": "Normal",
-    "name": "Rocky Snow Ball",
+    "name": "Magmaball",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:Frost"
     },
     "stackSize": 16,
     "ammoItem": {
-      "value": "CUSTOM:RockySnowBall"
+      "value": "CUSTOM:MagmaBall"
     },
     "shootConstantly": true,
     "usageCount": 0,
     "actionSound": {
-      "value": "entity.arrow.shoot"
+      "value": "entity.blaze.shoot"
     },
     "hasGlow": false,
-    "animation": "block",
+    "animation": "bow",
     "enableMeleeDamage": true,
     "damageVsEntity": 2.0,
-    "bulletPower": 0.5,
-    "bulletDamage": 3.0,
-    "bulletKnockback": 1,
+    "bulletPower": 0.4,
+    "bulletDamage": 2.0,
+    "bulletKnockback": 0,
     "bulletParticles": false,
-    "bulletIgnitesFire": false,
+    "bulletIgnitesFire": true,
     "bulletItemTexture": {
-      "value": "CUSTOM:RockySnowBall"
+      "value": "CUSTOM:MagmaBall"
     },
     "bulletModel": "Default",
     "customBulletModelTexture": "",
-    "onBulletHitsBlock": {
-      "name": "RockySnowballHit"
-    },
-    "onBulletHitsEntity": {
-      "name": "RockySnowballHit"
+    "onBulletFlyingTick": {
+      "name": "MagmaBallWhileBulletFlyingTick"
     }
   }
 }

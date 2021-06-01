@@ -3,41 +3,38 @@
   "_type": "gun",
   "definition": {
     "renderType": 0,
-    "texture": "rockyball",
+    "texture": "firework_rocket",
     "customModelName": "Normal",
-    "name": "Rocky Snow Ball",
+    "name": "Firework Snowball",
     "specialInfo": [],
     "creativeTab": {
       "value": "CUSTOM:Frost"
     },
     "stackSize": 16,
     "ammoItem": {
-      "value": "CUSTOM:RockySnowBall"
+      "value": "CUSTOM:FireworkSnowball"
     },
     "shootConstantly": true,
     "usageCount": 0,
     "actionSound": {
-      "value": "entity.arrow.shoot"
+      "value": "entity.firework.launch"
     },
     "hasGlow": false,
     "animation": "block",
     "enableMeleeDamage": true,
     "damageVsEntity": 2.0,
-    "bulletPower": 0.5,
-    "bulletDamage": 3.0,
-    "bulletKnockback": 1,
+    "bulletPower": 2.0,
+    "bulletDamage": 0.2,
+    "bulletKnockback": 5,
     "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
-      "value": "CUSTOM:RockySnowBall"
+      "value": "Items.SNOWBALL"
     },
     "bulletModel": "Default",
     "customBulletModelTexture": "",
-    "onBulletHitsBlock": {
-      "name": "RockySnowballHit"
-    },
-    "onBulletHitsEntity": {
-      "name": "RockySnowballHit"
+    "onBulletFlyingTick": {
+      "name": "FireworkSnowballWhileBulletFlyingTick"
     }
   }
 }

@@ -206,6 +206,129 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "explosive_snowballrecipe"
+    },
+    {
+      "name": "MagmaBall",
+      "type": "gun",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_ball"
+    },
+    {
+      "name": "MagmaBallWhileBulletFlyingTick",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_ball_while_bullet_flying_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MagmaBallRecipe",
+      "type": "recipe",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "magma_ball_recipe"
+    },
+    {
+      "name": "PowderSnowEntityCollidesInTheBlock",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "powder_snow_entity_collides_in_the_block",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PowderSnow",
+      "type": "block",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "powder_snow"
+    },
+    {
+      "name": "FireworkSnowball",
+      "type": "gun",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "firework_snowball"
+    },
+    {
+      "name": "FireworkSnowballWhileBulletFlyingTick",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "firework_snowball_while_bullet_flying_tick",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -215,9 +338,12 @@
       "item.frost_dimension.iceball": "Iceball",
       "item.snowball_warfare.iceball": "Iceball",
       "item.frost_dimension.explosive_snowball": "Explosive Snow Ball",
-      "item.snowball_warfare.rocky_snow_ball": "Rocky Snow Ball",
       "item.frost_dimension.rocky_snow_ball": "Rocky Snow Ball",
       "item.snowball_warfare.explosive_snowball": "Explosive Snow Ball",
+      "item.snowball_warfare.magma_ball": "Magmaball",
+      "item.snowball_warfare.rocky_snow_ball": "Rocky Snow Ball",
+      "item.snowball_warfare.firework_snowball": "Firework Snowball",
+      "block.snowball_warfare.powder_snow": "Powder Snow",
       "item.frost_dimension.huge_snowball": "Huge Snow Ball",
       "itemGroup.tabfrost": "Snowball Warfare",
       "item.snowball_warfare.huge_snowball": "Huge Snow Ball"

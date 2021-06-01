@@ -19,6 +19,7 @@ import net.minecraft.util.ActionResult;
 import net.minecraft.network.IPacket;
 import net.minecraft.item.UseAction;
 import net.minecraft.item.ShootableItem;
+import net.minecraft.item.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -34,9 +35,9 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.entity.EntityClassification;
 import net.minecraft.entity.Entity;
 
-import net.mcreator.snowballwarfare.procedures.RockySnowballHitProcedure;
+import net.mcreator.snowballwarfare.procedures.FireworkSnowballWhileBulletFlyingTickProcedure;
 import net.mcreator.snowballwarfare.itemgroup.FrostItemGroup;
-import net.mcreator.snowballwarfare.entity.renderer.RockySnowBallRenderer;
+import net.mcreator.snowballwarfare.entity.renderer.FireworkSnowballRenderer;
 import net.mcreator.snowballwarfare.SnowballWarfareModElements;
 
 import java.util.Random;
@@ -47,15 +48,15 @@ import com.google.common.collect.Multimap;
 import com.google.common.collect.ImmutableMultimap;
 
 @SnowballWarfareModElements.ModElement.Tag
-public class RockySnowBallItem extends SnowballWarfareModElements.ModElement {
-	@ObjectHolder("snowball_warfare:rocky_snow_ball")
+public class FireworkSnowballItem extends SnowballWarfareModElements.ModElement {
+	@ObjectHolder("snowball_warfare:firework_snowball")
 	public static final Item block = null;
 	public static final EntityType arrow = (EntityType.Builder.<ArrowCustomEntity>create(ArrowCustomEntity::new, EntityClassification.MISC)
 			.setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).setCustomClientFactory(ArrowCustomEntity::new)
-			.size(0.5f, 0.5f)).build("entitybulletrocky_snow_ball").setRegistryName("entitybulletrocky_snow_ball");
-	public RockySnowBallItem(SnowballWarfareModElements instance) {
-		super(instance, 3);
-		FMLJavaModLoadingContext.get().getModEventBus().register(new RockySnowBallRenderer.ModelRegisterHandler());
+			.size(0.5f, 0.5f)).build("entitybulletfirework_snowball").setRegistryName("entitybulletfirework_snowball");
+	public FireworkSnowballItem(SnowballWarfareModElements instance) {
+		super(instance, 19);
+		FMLJavaModLoadingContext.get().getModEventBus().register(new FireworkSnowballRenderer.ModelRegisterHandler());
 	}
 
 	@Override
@@ -66,7 +67,7 @@ public class RockySnowBallItem extends SnowballWarfareModElements.ModElement {
 	public static class ItemRanged extends Item {
 		public ItemRanged() {
 			super(new Item.Properties().group(FrostItemGroup.tab).maxStackSize(16));
-			setRegistryName("rocky_snow_ball");
+			setRegistryName("firework_snowball");
 		}
 
 		@Override
@@ -109,23 +110,23 @@ public class RockySnowBallItem extends SnowballWarfareModElements.ModElement {
 				double z = entity.getPosZ();
 				if (true) {
 					ItemStack stack = ShootableItem.getHeldAmmo(entity,
-							e -> e.getItem() == new ItemStack(RockySnowBallItem.block, (int) (1)).getItem());
+							e -> e.getItem() == new ItemStack(FireworkSnowballItem.block, (int) (1)).getItem());
 					if (stack == ItemStack.EMPTY) {
 						for (int i = 0; i < entity.inventory.mainInventory.size(); i++) {
 							ItemStack teststack = entity.inventory.mainInventory.get(i);
-							if (teststack != null && teststack.getItem() == new ItemStack(RockySnowBallItem.block, (int) (1)).getItem()) {
+							if (teststack != null && teststack.getItem() == new ItemStack(FireworkSnowballItem.block, (int) (1)).getItem()) {
 								stack = teststack;
 								break;
 							}
 						}
 					}
 					if (entity.abilities.isCreativeMode || stack != ItemStack.EMPTY) {
-						ArrowCustomEntity entityarrow = shoot(world, entity, random, 0.5f, 3, 1);
+						ArrowCustomEntity entityarrow = shoot(world, entity, random, 2f, 0.2, 5);
 						itemstack.damageItem(1, entity, e -> e.sendBreakAnimation(entity.getActiveHand()));
 						if (entity.abilities.isCreativeMode) {
 							entityarrow.pickupStatus = AbstractArrowEntity.PickupStatus.CREATIVE_ONLY;
 						} else {
-							if (new ItemStack(RockySnowBallItem.block, (int) (1)).isDamageable()) {
+							if (new ItemStack(FireworkSnowballItem.block, (int) (1)).isDamageable()) {
 								if (stack.attemptDamageItem(1, random, entity)) {
 									stack.shrink(1);
 									stack.setDamage(0);
@@ -171,31 +172,18 @@ public class RockySnowBallItem extends SnowballWarfareModElements.ModElement {
 		@Override
 		@OnlyIn(Dist.CLIENT)
 		public ItemStack getItem() {
-			return new ItemStack(RockySnowBallItem.block, (int) (1));
+			return new ItemStack(Items.SNOWBALL, (int) (1));
 		}
 
 		@Override
 		protected ItemStack getArrowStack() {
-			return new ItemStack(RockySnowBallItem.block, (int) (1));
+			return new ItemStack(FireworkSnowballItem.block, (int) (1));
 		}
 
 		@Override
 		protected void arrowHit(LivingEntity entity) {
 			super.arrowHit(entity);
 			entity.setArrowCountInEntity(entity.getArrowCountInEntity() - 1);
-			Entity sourceentity = this.func_234616_v_();
-			double x = this.getPosX();
-			double y = this.getPosY();
-			double z = this.getPosZ();
-			World world = this.world;
-			{
-				Map<String, Object> $_dependencies = new HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				RockySnowballHitProcedure.executeProcedure($_dependencies);
-			}
 		}
 
 		@Override
@@ -206,15 +194,15 @@ public class RockySnowBallItem extends SnowballWarfareModElements.ModElement {
 			double z = this.getPosZ();
 			World world = this.world;
 			Entity entity = this.func_234616_v_();
+			{
+				Map<String, Object> $_dependencies = new HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				FireworkSnowballWhileBulletFlyingTickProcedure.executeProcedure($_dependencies);
+			}
 			if (this.inGround) {
-				{
-					Map<String, Object> $_dependencies = new HashMap<>();
-					$_dependencies.put("x", x);
-					$_dependencies.put("y", y);
-					$_dependencies.put("z", z);
-					$_dependencies.put("world", world);
-					RockySnowballHitProcedure.executeProcedure($_dependencies);
-				}
 				this.remove();
 			}
 		}
@@ -231,7 +219,7 @@ public class RockySnowBallItem extends SnowballWarfareModElements.ModElement {
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")),
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.launch")),
 				SoundCategory.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
@@ -241,17 +229,17 @@ public class RockySnowBallItem extends SnowballWarfareModElements.ModElement {
 		double d0 = target.getPosY() + (double) target.getEyeHeight() - 1.1;
 		double d1 = target.getPosX() - entity.getPosX();
 		double d3 = target.getPosZ() - entity.getPosZ();
-		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 0.5f * 2, 12.0F);
+		entityarrow.shoot(d1, d0 - entityarrow.getPosY() + (double) MathHelper.sqrt(d1 * d1 + d3 * d3) * 0.2F, d3, 2f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setDamage(3);
-		entityarrow.setKnockbackStrength(1);
+		entityarrow.setDamage(0.2);
+		entityarrow.setKnockbackStrength(5);
 		entityarrow.setIsCritical(false);
 		entity.world.addEntity(entityarrow);
 		double x = entity.getPosX();
 		double y = entity.getPosY();
 		double z = entity.getPosZ();
 		entity.world.playSound((PlayerEntity) null, (double) x, (double) y, (double) z,
-				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")),
+				(net.minecraft.util.SoundEvent) ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.launch")),
 				SoundCategory.PLAYERS, 1, 1f / (new Random().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}

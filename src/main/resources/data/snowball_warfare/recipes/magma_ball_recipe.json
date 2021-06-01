@@ -1,0 +1,16 @@
+{
+  "group": "snowball_warfare",
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "0"
+  ],
+  "key": {
+    "0": {
+      "item": "minecraft:magma_block"
+    }
+  },
+  "result": {
+    "item": "snowball_warfare:magma_ball",
+    "count": 2
+  }
+}
