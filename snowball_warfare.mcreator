@@ -329,6 +329,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "FireworkSnowballRecipe",
+      "type": "recipe",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "firework_snowball_recipe"
     }
   ],
   "variable_elements": [],

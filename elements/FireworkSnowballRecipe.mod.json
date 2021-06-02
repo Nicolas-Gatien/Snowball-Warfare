@@ -5,7 +5,7 @@
     "recipeType": "Crafting",
     "xpReward": 0.0,
     "cookingTime": 200,
-    "recipeRetstackSize": 2,
+    "recipeRetstackSize": 1,
     "group": "",
     "recipeShapeless": true,
     "recipeSlots": [
@@ -13,34 +13,34 @@
         "value": ""
       },
       {
-        "value": ""
+        "value": "Items.FIREWORKS"
       },
       {
         "value": ""
       },
       {
-        "value": ""
+        "value": "Items.FIREWORKS"
       },
       {
-        "value": "Blocks.MAGMA"
+        "value": "Items.SNOWBALL"
       },
       {
-        "value": ""
-      },
-      {
-        "value": ""
+        "value": "Items.FIREWORKS"
       },
       {
         "value": ""
+      },
+      {
+        "value": "Items.FIREWORKS"
       },
       {
         "value": ""
       }
     ],
     "recipeReturnStack": {
-      "value": "CUSTOM:MagmaBall"
+      "value": "CUSTOM:FireworkSnowball"
     },
-    "name": "magma_ball_recipe",
+    "name": "firework_snowball_recipe",
     "namespace": "mod"
   }
 }
